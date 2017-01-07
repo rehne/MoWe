@@ -10,7 +10,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>movieDB</title>
+		<title>movieDB | Anmeldung</title>
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
 	</head>
@@ -29,8 +29,8 @@
 						<div>
 							<label for="password">Password</label>
 							<input name="password" type="password" class="form-control" size="25" required>
-						</div>
-						<input type="submit" name="submit" value="Anmelden">
+						</div><br>
+						<input type="submit" name="submit" value="Anmelden" class="btn btn-warning btn-lg">
 					</form>
 					<p><?php echo $error;?></p>
 				</div>
