@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
 	</head>
-	<body>
+	<body class="bg">
 		<div class="container">
 			<div class="col-sm-6 col-sm-offset-3">
 				<div class="jumbotron">
@@ -28,6 +28,8 @@
 						</div><br>
 						<input type="submit" name="submit" value="Registrieren" class="btn btn-warning btn-lg">
 					</form>
+          <?php if ( isset( $output ) ) {  echo '<div class="redbox">' . $output . '</div>';} ?>
+          <?php if ( isset( $msg ) ) {  echo '<div class="greenbox">' . $msg . '</div>';} ?>
 					<p><?php echo $error;?></p>
 				</div>
 			</div>

@@ -6,17 +6,23 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
 	</head>
-  <body>
+  <body class="bg">
     <div class="container">
       <div class="col-sm-6 col-sm-offset-3">
         <div class="jumbotron text-center">
-          <h1>moviefy</h1>
-          <hr>
-          <p>Um die Anwendung zu benutzen musst du dich..</p>
-          <a href="anmelden.php" class="btn btn-default">Anmelden</a> oder
-          <a href="registrieren.php" class="btn btn-default"> Registrieren</a>
+					<a href="index.php"><img width="400" height="250" alt="Moviefy Logo" class="header-image" src="img/logo.png"></a>
+					<hr>
+          <h2>Login</h2>
+          <p>Gib deinen Benutzernamen und dein Passwort ein um dich anzumelden</p>
+          <a href="anmelden.php" class="hvr-sweep-to-bottom">Anmelden</a>
         </div>
       </div>
+			<div class="col-sm-6 col-sm-offset-3">
+        <div class="jumbotron text-center">
+					<p>Du besitzt kein Benutzerkonto? </br>Dann kannst du es hier anlegen</p>
+					<a href="registrieren.php" class="hvr-sweep-to-top">Registrieren</a>
+				</div>
+			</div>
     </div>
   </body>
 </html>
