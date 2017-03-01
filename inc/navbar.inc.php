@@ -1,34 +1,55 @@
-<body class="bg">
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">movieDB</a>
-      </div>
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="dashboard.php">Dashboard</a></li>
-          <li><a href="movie.php">Filme</a></li>
-          <li><a href="shows.php">Serien</a></li>
-          <li><a href="doc.php">Dokumentation</a></li>
-          <li><a href="about.php">Über</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-              <i class="fa fa-user-circle" aria-hidden="true"></i>&nbsp;Hi' <?php echo $login_user;?>!&nbsp;<span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-              <li><a href="functions/logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;Ausloggen</a></li>
-              <li><a href="profile.php"><i class="fa fa-address-card-o" aria-hidden="true"></i>&nbsp;Profil</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+<?php 
+$activePage = basename($_SERVER['PHP_SELF'], ".php");
+?>
+		<nav class="navbar navbar-default navbar-fixed">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+					<?php
+					if($activePage == 'dashboard') {
+					echo('<a class="navbar-brand" href="dashboard.php">Dashboard</a>');
+					}
+					if($activePage == 'user') {
+					echo('<a class="navbar-brand" href="user.php">Benutzerprofil</a>');
+					}
+					if($activePage == 'movie') {
+					echo('<a class="navbar-brand" href="movie.php">Filme</a>');
+					}
+					if($activePage == 'serie') {
+					echo('<a class="navbar-brand" href="serie.php">Serien</a>');
+					}
+					if($activePage == 'aboutus') {
+					echo('<a class="navbar-brand" href="aboutus.php">Über uns</a>');
+					}
+					?>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-left">                       
+                        <li>
+                           <a href="">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                   <i class="fa fa-user-circle" aria-hidden="true"></i>&nbsp;&nbsp;Hi' <?php if (isset($login_user)) echo $login_user;?>
+                                    <b class="caret"></b>
+                              </a>
+                              <ul class="dropdown-menu">
+                                <li><a style="font-size:16px;" href="user.php"><i class="fa fa-pencil fa-2x" aria-hidden="true"></i>&nbsp;&nbsp;Profil bearbeiten</a></li>
+								<li class="divider"></li>
+                                <li><a style="font-size:16px;" href="logout.php"><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i>&nbsp;&nbsp;Abmelden</a></li>
+                              </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
