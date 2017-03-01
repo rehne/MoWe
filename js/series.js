@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $("#ajax").click(function(){
     $.ajax({
-      url: "series.json",
+      url: "/series.json",
       type: "GET",
       success: function(data){
         for (var i = 0; i < data.length; i++) {
