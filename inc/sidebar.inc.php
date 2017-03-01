@@ -31,12 +31,7 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
                         <p>Serien Ajax Request</p>
                     </a>
                 </li>
-                <li class="<?= ($activePage == 'aboutus') ? 'active':''; ?>">
-                    <a href="aboutus.php">
-                        <i class="fa fa-id-card-o" aria-hidden="true"></i>
-                        <p>Über uns</p>
-                    </a>
-                </li>
+                
             </ul>
 	</div>
 </div>

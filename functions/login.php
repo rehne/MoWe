@@ -2,35 +2,35 @@
 	session_start();
 
 
-	$error = ""; //Variable for storing our errors.
+	$error = ""; // Variable um die Fehler zu speichern
 	if(isset($_POST["anmelden"])) {
 		if(empty($_POST["username"]) || empty($_POST["password"])) {
 			$error = "Both fields are required.";
 		} else {
-			// Define $username and $password
+			// Definieren von Username und Passwort
 			$username = $_POST['username'];
 			$password = $_POST['password'];
 
-			// To protect from MySQL injection
+			// Vor MYSQL injektionen schützen
 			$username = stripslashes($username);
 			$password = stripslashes($password);
 			$username = mysqli_real_escape_string($db, $username);
 			$password = mysqli_real_escape_string($db, $password);
 			$password = md5($password);
 
-			//Check username and password from database
+			//Username und Password in der Datenbank checken
 			$sql = "SELECT uid FROM users WHERE username='$username' and password='$password'";
 			$result = mysqli_query($db,$sql);
 			$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 
-			//If username and password exist in our database then create a session.
-			//Otherwise echo error.
+			//Wenn der Username und das Passwort mit einem Eintrag in der DB übereinstimmen öffne die Session
+			//Anderenfalls wird mit Echo ein Error ausgegeben
 
 			if(mysqli_num_rows($result) == 1) {
-				$_SESSION['username'] = $username; // Initializing Session
-				header("location: ../dashboard.php"); // Redirecting To Other Page
+				$_SESSION['username'] = $username; // Session Initialisieren
+				header("location: ../dashboard.php"); // Umleitung auf andere Seite
 			} else {
-				$error = "Incorrect username or password.";
+				$error = "Username oder Passwort nicht korrekt.";
 			}
 		}
 	}

@@ -28,7 +28,7 @@
     <link href="css/light-bootstrap-dashboard.css" rel="stylesheet"/> 
 	<script src="js/bootstrap-notify.js"></script>
 	
-	<!-- <script src="https://use.fontawesome.com/1e09e33b3d.js"></script> -->
+	<script src="https://use.fontawesome.com/1e09e33b3d.js"></script> 
 	
 	
    

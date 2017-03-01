@@ -128,7 +128,7 @@ if(isset($_POST["movieupdate"])) {
 													<input name="uland" type="text" class="form-control" placeholder="Land" value="<?php echo("$uland") ?>">
 												</div>
 											</div>
-											<div class="col col-lg-2">
+											<div class="col col-lg-4">
 											<div class="form-group">
 													<label>Alter (Optional)</label>
 											<input name="ualter" type="number" class="form-control" placeholder="Alter" value="<?php echo("$ualter") ?>">
@@ -154,7 +154,7 @@ if(isset($_POST["movieupdate"])) {
 						<div class="panel-heading clearfix">
 							<div class="header">
                                 <h4 class="title">Filme bearbeiten</h4>
-								<p class="category">Hier kannst du die Filme der Datenbank ändern!</p>
+								<p class="category">Hier kannst du Filme in die Datenbank hinzufügen!</p>
 									<div class="pull-right">
 										<button class="btn btn-default" type="button" data-toggle="collapse" data-target="#collapse03" aria-expanded="" aria-controls="collapse01"><i class="fa fa-bars"></i></button>
 									</div>
@@ -295,12 +295,9 @@ if(isset($_POST["movieupdate"])) {
 									
 								</div>	
 							</div>
-							<div class="panel-heading clearfix">
-							
-							<button  type="submit" name="movieupdate" onclick="not.showNotification('top','center')" class="btn btn-info btn-fill pull-left">Film speichern</button>
 							</form>
 							
-							</div>
+
 						</div>
 					</div>
 				</div>
@@ -318,6 +315,7 @@ if(isset($_POST["movieupdate"])) {
 							<div class="header">
                                 <h4 class="title">Lieblingsgenre</h4>
 								<p class="category">Hier kannst du dein Lieblingsgerne angeben!</p>
+								<p class="category">Dieser Reiter hat noch keine Funktion!</p>
 									<div class="pull-right">
 										<button class="btn btn-default" type="button" data-toggle="collapse" data-target="#collapse02" aria-expanded="false" aria-controls="collapse01"><i class="fa fa-bars"></i></button>
 									</div>
@@ -537,10 +535,9 @@ if(isset($_POST["movieupdate"])) {
 
 </body>
 
-	<!--  Checkbox, Radio & Switch Plugins -->
-	<script src="assets/js/bootstrap-checkbox-radio-switch.js"></script>
-    <!--  Notifications Plugin    -->
-	<script src="assets/js/bootstrap-notify.js"></script>
+
+	<script src="js/bootstrap-checkbox-radio-switch.js"></script>
+
 
 
 </html>

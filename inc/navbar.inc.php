@@ -23,18 +23,11 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
 					if($activePage == 'serie') {
 					echo('<a class="navbar-brand" href="serie.php">Serien</a>');
 					}
-					if($activePage == 'aboutus') {
-					echo('<a class="navbar-brand" href="aboutus.php">Über uns</a>');
-					}
 					?>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-left">                       
-                        <li>
-                           <a href="">
-                                <i class="fa fa-search"></i>
-                            </a>
-                        </li>
+                        
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">

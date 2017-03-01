@@ -71,5 +71,5 @@ include('inc/header.inc.php');
 </div>
 
 </body>
-	<script src="assets/js/bootstrap-notify.js"></script>
+	
 </html>
